@@ -8,10 +8,14 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'Build script placeholder'"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
@@ -21,5 +25,8 @@
     "node",
     "glitch",
     "express"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
 }
