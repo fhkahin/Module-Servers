@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to CYF Chat</title>
-  </head>
-  <body>
-    <header><h1>CYF Chat</h1></header>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fathi's Chat app</h1>
+    </header>
     <main>
-      <h2>Send a message</h2>
-      <form action="/messages" method="post">
-        <label
-          >Name: <input type="text" name="from" placeholder="Your Name"
-        /></label>
-        <label
-          >Message: <input type="text" name="text" placeholder="The message..."
-        /></label>
-        <button type="submit">Send</button>
-      </form>
+        <h2>Send a message</h2>
+        <form action="/messages" method="post" id="messageForm">
+            <label>Name: <input type="text" name="from" placeholder="Your Name" /></label>
+            <label>Message: <input type="text" name="text" placeholder="The message..." /></label>
+            <button type="submit">Send</button>
+        </form>
+        <h2>Messages</h2>
+        <ul id="messageList"></ul>
     </main>
     <footer>
-      <h3><a href="/messages">See all messages</a></h3>
+        <h3><a href="/messages">See all messages</a></h3>
     </footer>
-  </body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
 </html>
